@@ -1,1 +1,1 @@
-# AngularApp
+Angular Application with Node and Token Authentication
