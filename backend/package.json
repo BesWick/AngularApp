@@ -1,0 +1,26 @@
+{
+  "name": "angularapp",
+  "version": "1.0.0",
+  "description": "Angular Application with Node and Token Authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BesWick/AngularApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BesWick/AngularApp/issues"
+  },
+  "homepage": "https://github.com/BesWick/AngularApp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "jwt-simple": "^0.5.1",
+    "mongoose": "^5.0.0-rc1"
+  }
+}
