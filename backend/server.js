@@ -100,4 +100,4 @@ mongoose.connect('mongodb://test:test@ds239587.mlab.com:39587/socaiapp', (err) =
 
 
 app.use('/auth', auth.router)
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
