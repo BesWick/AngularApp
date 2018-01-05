@@ -1,17 +1,23 @@
 import { Component } from '@angular/core';
-
+import { AuthService } from './auth.service'
 
 @Component({
   selector: 'app-root',
   template: `
               <mat-toolbar> 
-              Social
+              <button mat-button routerLink="/">Social</button>
+              <button mat-button routerLink="/users"> Users</button>
               <span style = "flex: 1 1 auto"></span>
-              <a routerLink="/register"><button class="btn btn-success pull-right"> Register</button></a>
+              <button mat-button *ngIf="!authService.isAuthenticated" routerLink="/register"> Register</button>
+              <button mat-button *ngIf="!authService.isAuthenticated" routerLink="/login"> Login</button>
+              <button mat-button *ngIf="authService.isAuthenticated" (click)="authService.logout()"> Logout</button>
               </mat-toolbar>
               <router-outlet></router-outlet> `,
-  styleUrls: ['./app.component.css']
+  // styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor( private authService: AuthService){ }
+  
+  
   title = 'my app';
 }
